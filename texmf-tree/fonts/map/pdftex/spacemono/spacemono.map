@@ -1,0 +1,4 @@
+ecspacemono SpaceMono " T1Encoding ReEncoding " <spacemono.ttf T1-WGL4.enc
+ecspacemonoi SpaceMono-Italic " T1Encoding ReEncoding " <spacemonoi.ttf T1-WGL4.enc
+ecspacemonob SpaceMono-Bold " T1Encoding ReEncoding " <spacemonob.ttf T1-WGL4.enc
+ecspacemonobi SpaceMono-BoldItalic " T1Encoding ReEncoding " <spacemonobi.ttf T1-WGL4.enc

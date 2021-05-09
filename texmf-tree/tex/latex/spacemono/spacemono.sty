@@ -1,0 +1,11 @@
+\ProvidesPackage{spacemono}[2021/05/06 v.0.1 loads Space Mono as tt font]%
+% not using separate .fd file
+\DeclareFontFamily{T1}{spacemono}{}%
+\DeclareFontShape{T1}{spacemono}{b}{n}{<->ecspacemonob}{}%
+\DeclareFontShape{T1}{spacemono}{b}{it}{<->ecspacemonobi}{}%
+\DeclareFontShape{T1}{spacemono}{bx}{n}{<->ssub * spacemono/b/n}{}%
+\DeclareFontShape{T1}{spacemono}{bx}{it}{<->ssub * spacemono/b/it}{}%
+\DeclareFontShape{T1}{spacemono}{m}{n}{<->ecspacemono}{}%
+\DeclareFontShape{T1}{spacemono}{m}{it}{<->ecspacemonoi}{}%
+\usepackage[T1]{fontenc}%
+\renewcommand{\ttdefault}{spacemono}%
