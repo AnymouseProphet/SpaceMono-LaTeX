@@ -233,7 +233,7 @@ following line of code:
 
 Space Mono will now be the default monospace font used wherever your LaTeX code
 calls for a monospace font (e.g. the `\url{}` command, the `\texttt{}` command,
-`verbatim{}` environments, et cetera).
+`verbatim` environments, et cetera).
 
 ### Size Issue
 
