@@ -76,7 +76,7 @@ on macOS and Windows I suspect the option is meaningless.
 
 Leave it to a behemoth capitalist company to change how a font behaves in such
 a way that for font designers to get the original behavior, they have to select
-a new option that requires changing other metadata that then causes the font
+a new option that requires changing other meta-data that then causes the font
 not to work with some software. Capitalist idiots.
 
 In fairness I could be wrong about what the `typo metrics` option does. That
@@ -89,7 +89,7 @@ option is checked---and it does seem related to Microsoft rendering engines.
 Apparently some versions of Adobe Digital Edition also choke with `OS/2 Version
 4` so if you want to embed this font in an ePub---you probably should embed the
 TTF versions I have here rather than from Google Fonts. Otherwise it might work
-just fine for you but not work at all for someone else with a differen ePub
+just fine for you but not work at all for someone else with a different ePub
 viewer that uses an older version of ADE.
 
 
@@ -170,7 +170,7 @@ driver file exists purely for compatibility with old LaTeX projects that still
 use that old encoding.
 
 The T1 and OT1 driver files do not involve any novel or non-obvious code. I
-release them under the terms of the Creative Commons CC0 license. That licemse
+release them under the terms of the Creative Commons CC0 license. That license
 is equivalent to public domain.
 
 The T3 Encoding provides compatibility when using the
@@ -186,6 +186,11 @@ Space Mono itself does not provide the glyphs for the T3 encoding, what happens
 is the driver file tells LaTeX2e to use the tipa font files when a T3 encoding
 is active and Space Mono is the defined typewriter (monospace) font.
 
+If in the future the necessary glyphs are added to Space Mono then the driver
+file could be updated to use Space Mono for IPA instead of using the tipa
+provided font but I have no plans on doing that, and I do not think the
+original font developers have such plans either.
+
 The T3 driver file was copied from `t3cmtt.fd` in the tipa package and modified
 for Space Mono. It is licensed under the LPPL 1.2 license.
 
@@ -194,7 +199,7 @@ Install
 -------
 
 These instructions are for TeXLive 2021 but should work on older and newer
-versions and should work in *most* LaTeX distributions (MiKTex, MacTeX, PCTeX,
+versions and should work in *most* LaTeX distributions (MiKTeX, MacTeX, PCTeX,
 et cetera) but I have not tried.
 
 Find your `TEXMF-LOCAL` tree. Consult your LaTeX documentation. On my system
