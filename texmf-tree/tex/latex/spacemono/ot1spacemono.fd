@@ -1,0 +1,11 @@
+% ot1spacemono.fd
+%
+\ProvidesFile{ot1spacemono.fd}[2021/07/11 OT1 SpaceMono font definition]
+\DeclareFontFamily{OT1}{spacemono}{}
+\DeclareFontShape{OT1}{spacemono}{b}{n}{<->ecspacemonob}{}
+\DeclareFontShape{OT1}{spacemono}{b}{it}{<->ecspacemonobi}{}
+\DeclareFontShape{OT1}{spacemono}{bx}{n}{<->ssub * spacemono/b/n}{}
+\DeclareFontShape{OT1}{spacemono}{bx}{it}{<->ssub * spacemono/b/it}{}
+\DeclareFontShape{OT1}{spacemono}{m}{n}{<->ecspacemono}{}
+\DeclareFontShape{OT1}{spacemono}{m}{it}{<->ecspacemonoi}{}
+\endinput

@@ -60,7 +60,7 @@ It appears that the `typo metrics` options instructs that software not to do
 that but instead follow the instructions in the font as the font designer
 intended.
 
-As such you may not want to install these TTF fonts in this git on a Windows
+As such you may not want to install the TTF fonts in this git on a Windows
 system for use outside of LaTeX---instead just use Google Fonts download as
 system fonts on a Windows system---assuming you *want* Space Mono as a system
 font.
@@ -114,7 +114,7 @@ The resulting `.tfm` files are located within the following directory:
 
     texmf-tree/fonts/afm/googlefonts/spacemono/
 
-It is my understanding that in most contries, font metric files are not subject
+It is my understanding that in most countries, font metric files are not subject
 to copyright and therefore not subject to the font license. However, if that is
 not the case in your country, the Adobe Font Metric files and the TeX Font
 Metric files would fall under the same SIL OFL that the Space Mono font files
@@ -156,11 +156,45 @@ under the terms of the Creative Commons CC0 license. That license is equivalent
 to public domain.
 
 
+Font Driver Files
+-----------------
+
+Font driver files for three TeX Encodings are provided:
+
+1. `texmf-tree/tex/latex/spacemono/t1spacemono.fd`
+2. `texmf-tree/tex/latex/spacemono/ot1spacemono.fd`
+3. `texmf-tree/tex/latex/spacemono/t3spacemono.fd`
+
+The T1 Encoding is the encoding intended to be used with this font. The OT1
+driver file exists purely for compatibility with old LaTeX projects that still
+use that old encoding.
+
+The T1 and OT1 driver files do not involve any novel or non-obvious code. I
+release them under the terms of the Creative Commons CC0 license. That licemse
+is equivalent to public domain.
+
+The T3 Encoding provides compatibility when using the
+[tipa](https://ctan.org/pkg/tipa) package to typeset International Phonetic
+Alphabet characters.
+
+If you are using tipa *and* you have Space Mono set as the default monospace
+font *and* you want the IPA characters typeset using the tipa monospace font,
+then the T3 font driver for Space Mono is needed or you will end up with
+problems.
+
+Space Mono itself does not provide the glyphs for the T3 encoding, what happens
+is the driver file tells LaTeX2e to use the tipa font files when a T3 encoding
+is active and Space Mono is the defined typewriter (monospace) font.
+
+The T3 driver file was copied from `t3cmtt.fd` in the tipa package and modified
+for Space Mono. It is licensed under the LPPL 1.2 license.
+
+
 Install
 -------
 
 These instructions are for TeXLive 2021 but should work on older and newer
-versions and should work in *most* LaTeX distributions (MiKTex, MacTeX, PCTex,
+versions and should work in *most* LaTeX distributions (MiKTex, MacTeX, PCTeX,
 et cetera) but I have not tried.
 
 Find your `TEXMF-LOCAL` tree. Consult your LaTeX documentation. On my system

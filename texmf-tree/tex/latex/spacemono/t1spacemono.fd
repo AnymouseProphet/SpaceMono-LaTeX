@@ -1,0 +1,11 @@
+% t1spacemono.fd
+%
+\ProvidesFile{t1spacemono.fd}[2021/07/11 T1 SpaceMono font definition]
+\DeclareFontFamily{T1}{spacemono}{}
+\DeclareFontShape{T1}{spacemono}{b}{n}{<->ecspacemonob}{}
+\DeclareFontShape{T1}{spacemono}{b}{it}{<->ecspacemonobi}{}
+\DeclareFontShape{T1}{spacemono}{bx}{n}{<->ssub * spacemono/b/n}{}
+\DeclareFontShape{T1}{spacemono}{bx}{it}{<->ssub * spacemono/b/it}{}
+\DeclareFontShape{T1}{spacemono}{m}{n}{<->ecspacemono}{}
+\DeclareFontShape{T1}{spacemono}{m}{it}{<->ecspacemonoi}{}
+\endinput
