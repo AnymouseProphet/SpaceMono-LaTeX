@@ -8,12 +8,13 @@
 \RequirePackage{iftex}
 \ifpdftex
   \RequirePackage[T1]{fontenc}
-  \renewcommand{\ttdefault}{spacemono}
-\else
-  \RequirePackage{fontspec}
-  \setmonofont{spacemono.ttf}[
-    BoldFont       = spacemonob.ttf ,
-    ItalicFont     = spacemonoi.ttf ,
-    BoldItalicFont = spacemonobi.ttf ]
 \fi
+\@ifpackageloaded{fontspec}{
+  \setmonofont{spacemono.ttf}[
+      BoldFont       = spacemonob.ttf ,
+      ItalicFont     = spacemonoi.ttf ,
+      BoldItalicFont = spacemonobi.ttf ]
+}{
+  \renewcommand{\ttdefault}{spacemono}
+}
 \endinput
