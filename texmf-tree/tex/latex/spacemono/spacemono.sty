@@ -5,6 +5,15 @@
 
 \message{`spacemono' v\fileversion, \filedate\space Loads the Space Mono as default typewriter font (anymouseprophet)}
 
-\RequirePackage[T1]{fontenc}
-\renewcommand{\ttdefault}{spacemono}
+\RequirePackage{iftex}
+\ifpdftex
+  \RequirePackage[T1]{fontenc}
+  \renewcommand{\ttdefault}{spacemono}
+\else
+  \RequirePackage{fontspec}
+  \setmonofont{spacemono.ttf}[
+    BoldFont       = spacemonob.ttf ,
+    ItalicFont     = spacemonoi.ttf ,
+    BoldItalicFont = spacemonobi.ttf ]
+\fi
 \endinput
