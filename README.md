@@ -20,6 +20,12 @@ From the Google Fonts Page (retrieved 2021-05-08):
 
 See: [Google Fonts: About Space Mono](https://fonts.google.com/specimen/Space+Mono#about)
 
+This package will work in pdfLaTeX and LuaLaTeX. It is not tested in XeLaTeX.
+
+For LuaLaTeX (and presumably XeLaTeX) if `fontspec` is already loaded then it
+loads the fonts the `fontspec` way. Otherwise it loads them the traditional
+way.
+
 
 Modifications for LaTeX
 -----------------------
