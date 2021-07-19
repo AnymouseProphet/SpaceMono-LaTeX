@@ -1,10 +1,23 @@
 \NeedsTeXFormat{LaTeX2e}
-\def\fileversion{0.2}
-\def\filedate{2021/07/11}
+\def\fileversion{0.3}
+\def\filedate{2021/07/18}
 \ProvidesPackage{spacemono}[\filedate\space v\fileversion]
 
 \message{`spacemono' v\fileversion, \filedate\space Loads the Space Mono as default typewriter font (anymouseprophet)}
 
-\RequirePackage[T1]{fontenc}
-\renewcommand{\ttdefault}{spacemono}
+\RequirePackage{iftex}
+\ifpdftex
+  \RequirePackage[T1]{fontenc}
+\fi
+\@ifpackageloaded{fontspec}{
+  \setmonofont
+    [ Extension      = .ttf ,
+      UprightFont    = spacemono ,
+      BoldFont       = spacemonob ,
+      ItalicFont     = spacemonoi ,
+      BoldItalicFont = spacemonobi ]
+    {spacemono}
+}{
+  \renewcommand{\ttdefault}{spacemono}
+}
 \endinput
